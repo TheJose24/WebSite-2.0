@@ -14,16 +14,13 @@ import org.json.simple.parser.ParseException;
 public class OpenAI {
     @Value("${openai.apiKey}")
     private String apiKey;
-    @Value("${openai.apiUrl}}")
+    @Value("${openai.apiUrl}")
     private String apiUrl;
 
     @Autowired
     private RestTemplate restTemplate;
 
-    public OpenAI(@Value("${openai.apiKey}") String apiKey, @Value("${openai.apiUrl}") String apiUrl) {
-        this.apiKey = apiKey;
-        this.apiUrl = apiUrl;
-    }
+
 
     public String processResponse(String responseJson) {
         try {

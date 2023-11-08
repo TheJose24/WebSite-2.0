@@ -1,0 +1,1569 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:wght@100;300;400;600;800&display=swap');
+*{
+    box-sizing: border-box;
+    font-family: 'Work Sans';
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para la barra de desplazamiento en todo el documento */
+::-webkit-scrollbar {
+    width: 10px; /* Ancho de la barra de desplazamiento */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #1e2326; /* Color del fondo de la barra de desplazamiento */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #1cb698; /* Color de la barra de desplazamiento */
+    border-radius: 6px; /* Radio de los bordes de la barra de desplazamiento */
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #116c5a; /* Color de la barra de desplazamiento al pasar el mouse */
+  }
+
+html{
+    /*Permite deslizar cuando se hace click en los links del menu*/
+    scroll-behavior: smooth;
+}
+
+/* ============================ LOADING ============================ */
+.ui-abstergo {
+    --primary: #1cb698;
+    --secondary: rgba(255, 255, 255, 0.5);
+    --shadow-blur: 3px;
+    --text-shadow-blur: 3px;
+    --animation-duration: 2s;
+    --size: 2.5;
+  }
+  
+  .abstergo-loader * {
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+  }
+  
+  .ui-abstergo {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+  }
+
+  .contenedor{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    row-gap: 30px;
+    scale: var(--size);
+  }
+  
+  .ui-abstergo .ui-text {
+    color: var(--primary);
+    text-shadow: 0 0 var(--text-shadow-blur) var(--secondary);
+    font-family: Menlo, sans-serif;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+    -webkit-column-gap: 3px;
+    -moz-column-gap: 3px;
+    column-gap: 3px;
+  }
+  
+  .ui-abstergo .ui-dot {
+    content: "";
+    display: block;
+    width: 3px;
+    height: 3px;
+    -webkit-animation: dots var(--animation-duration) infinite linear;
+    animation: dots var(--animation-duration) infinite linear;
+    -webkit-animation-delay: .4s;
+    animation-delay: .4s;
+    background-color: var(--primary);
+  }
+  
+  .ui-abstergo .ui-dot:nth-child(2) {
+    -webkit-animation-delay: .8s;
+    animation-delay: .8s;
+  }
+  
+  .ui-abstergo .ui-dot:nth-child(3) {
+    -webkit-animation-delay: 1.2s;
+    animation-delay: 1.2s;
+  }
+  
+  .ui-abstergo .ui-dot+.ui-dot {
+    margin-left: 3px;
+  }
+  
+  .abstergo-loader {
+    width: 103px;
+    height: 90px;
+    position: relative;
+  }
+  
+  .abstergo-loader div {
+    width: 50px;
+    border-right: 12px solid transparent;
+    border-left: 12px solid transparent;
+    border-top: 21px solid var(--primary);
+    position: absolute;
+    -webkit-filter: drop-shadow(0 0 var(--shadow-blur) var(--secondary));
+    filter: drop-shadow(0 0 var(--shadow-blur) var(--secondary));
+  }
+  
+  .abstergo-loader div:nth-child(1) {
+    top: 27px;
+    left: 7px;
+    rotate: -60deg;
+    -webkit-animation: line1 var(--animation-duration) linear infinite alternate;
+    animation: line1 var(--animation-duration) linear infinite alternate;
+  }
+  
+  .abstergo-loader div:nth-child(2) {
+    bottom: 2px;
+    left: 0;
+    rotate: 180deg;
+    -webkit-animation: line2 var(--animation-duration) linear infinite alternate;
+    animation: line2 var(--animation-duration) linear infinite alternate;
+  }
+  
+  .abstergo-loader div:nth-child(3) {
+    bottom: 16px;
+    right: -9px;
+    rotate: 60deg;
+    -webkit-animation: line3 var(--animation-duration) linear infinite alternate;
+    animation: line3 var(--animation-duration) linear infinite alternate;
+  }
+  
+  .abstergo-loader:hover div:nth-child(1) {
+    top: 21px;
+    left: 14px;
+    rotate: 60deg;
+  }
+  
+  .abstergo-loader:hover div:nth-child(2) {
+    bottom: 5px;
+    left: -8px;
+    rotate: 300deg;
+  }
+  
+  .abstergo-loader:hover div:nth-child(3) {
+    bottom: 7px;
+    right: -11px;
+    rotate: 180deg;
+  }
+  
+  @-webkit-keyframes line1 {
+    0%,
+    40% {
+      top: 27px;
+      left: 7px;
+      rotate: -60deg;
+    }
+  
+    60%,
+    100% {
+      top: 22px;
+      left: 14px;
+      rotate: 60deg;
+    }
+  }
+  
+  @keyframes line1 {
+    0%,
+    40% {
+      top: 27px;
+      left: 7px;
+      rotate: -60deg;
+    }
+  
+    60%,
+    100% {
+      top: 22px;
+      left: 14px;
+      rotate: 60deg;
+    }
+  }
+  
+  @-webkit-keyframes line2 {
+    0%,
+    40% {
+      bottom: 2px;
+      left: 0;
+      rotate: 180deg;
+    }
+  
+    60%,
+    100% {
+      bottom: 5px;
+      left: -8px;
+      rotate: 300deg;
+    }
+  }
+  
+  @keyframes line2 {
+    0%,
+    40% {
+      bottom: 2px;
+      left: 0;
+      rotate: 180deg;
+    }
+  
+    60%,
+    100% {
+      bottom: 5px;
+      left: -8px;
+      rotate: 300deg;
+    }
+  }
+  
+  @-webkit-keyframes line3 {
+    0%,
+    40% {
+      bottom: 16px;
+      right: -9px;
+      rotate: 60deg;
+    }
+  
+    60%,
+    100% {
+      bottom: 7px;
+      right: -11px;
+      rotate: 180deg;
+    }
+  }
+  
+  @keyframes line3 {
+    0%,
+    40% {
+      bottom: 16px;
+      right: -9px;
+      rotate: 60deg;
+    }
+  
+    60%,
+    100% {
+      bottom: 7px;
+      right: -11px;
+      rotate: 180deg;
+    }
+  }
+  
+  @-webkit-keyframes dots {
+    0% {
+      background-color: var(--secondary);
+    }
+  
+    30% {
+      background-color: var(--primary);
+    }
+  
+    70%, 100% {
+      background-color: var(--secondary);
+    }
+  }
+  
+  @keyframes dots {
+    0% {
+      background-color: var(--secondary);
+    }
+  
+    30% {
+      background-color: var(--primary);
+    }
+  
+    70%, 100% {
+      background-color: var(--secondary);
+    }
+  }
+
+  .loader{
+    background: #1e2326;
+    position: fixed;
+    z-index: 1000;
+    clip-path: circle(150% at 100% 0);
+    transition: clip-path 1s ease-in-out;
+    overflow: hidden;
+  }
+
+  .loader2{
+    clip-path: circle(0% at 100% 0);
+  }
+
+/*MENU*/
+.contenedor-header{
+    background: #1e2326;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.contenedor-header header{
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.contenedor-header header .logo a img{
+    width: 170px;
+}
+
+.contenedor-header header ul{
+    display: flex;
+    list-style: none;
+}
+
+.contenedor-header header ul li{
+    display: inline-flex;
+}
+
+.contenedor-header header nav ul li a{
+    text-align: none;
+    color: #fff;
+    margin: 0 15px;
+    padding: 3px;
+    transition: .5s;
+    text-decoration: none;
+}
+
+.contenedor-header header nav ul li a::before{
+    margin-left: auto;
+}
+
+.contenedor-header header nav ul li a::after,
+.contenedor-header header nav ul li a::before{
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: #1cb698;
+  display: block;
+  transition: 0.5s;
+}
+
+.contenedor-header header nav ul a:hover::after,
+.contenedor-header header nav ul a:hover::before{
+    width: 100%;
+}
+
+.nav-responsive{
+    background-color: #1cb698;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+nav a.active {
+    border-radius: 10% 25%;
+    background-color: #1cb698; /* Establecer el color de fondo para la sección activa */
+  }
+
+/*SECCION INICIO*/
+.inicio{
+    background: linear-gradient(to top, rgba(30,35,38,.8), rgba(30,35,38,1)),
+    url(images/fondo-inicio.jpg);
+    background-size: cover;
+    height: 100vh;
+    color: #fff;
+    display: flex;
+    align-items: end;
+}
+
+.inicio .contenido-banner{
+    padding: 20px;
+    background-color: #1e2326;
+    max-width: 350px;
+    margin: 2vh auto;
+    text-align: center;
+    border-radius: 40px;
+}
+
+.inicio .contenido-banner img{
+    margin-top: 40px;
+    border: 10px solid #1cb698;
+    display: block;
+    width: 80%;
+    margin: auto;
+    border-radius: 100%;
+}
+
+.inicio .contenido-banner h1{
+    margin-top: 40px;
+    font-size: 42px;
+    font-family: 'Righteous';
+}
+
+.inicio .contenido-banner h2{
+    font-size: 15px;
+    font-weight: normal; 
+}
+
+.inicio .contenido-banner .redes a{
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 40px 5px;
+    font-size: 20px;
+    transition: .3s;
+}
+
+.inicio .contenido-banner .redes a:hover{
+    background-color: #1cb698;
+}
+
+.sobremi{
+    background-color: #1e2326;
+    color: #fff;
+    padding: 50px 20px;
+}
+
+.sobremi .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+
+.sobremi h2{
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+}
+
+.sobremi .contenido-seccion p{
+    font: 18px;
+    line-height: 22px;
+    margin-bottom: 20px;
+}
+
+.sobremi .contenido-seccion p span{
+    color: #1cb698;
+    font-weight: bold;
+}
+
+.sobremi .fila{
+    display: flex;
+}
+
+.sobremi .fila .col{
+    width: 50%;
+}
+
+.sobremi .fila .col h3{
+   font-size: 28px;
+   font-family: 'Righteous';
+   margin-bottom: 25px; 
+}
+
+.sobremi .fila .col ul{
+    list-style: none;
+}
+
+.sobremi .fila .col ul li{
+    margin: 12px 0;
+}
+
+.sobremi .fila .col ul li strong{
+    display: inline-block;
+    color: #1cb698;
+    width: 130px;
+}
+
+.sobremi .fila .col ul li span{
+    background-color: #1cb698;
+    padding: 3px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.sobremi .fila .col .contenedor-intereses{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sobremi .fila .col .contenedor-intereses .interes{
+    width: 100px;
+    height: 100px;
+    background-color: #252a2e;
+    border-radius: 10px;
+    margin: 0 15px 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+}
+
+.sobremi .fila .col .contenedor-intereses .interes:hover{
+    background-color: #1cb698;
+}
+
+.sobremi .fila .col .contenedor-intereses .interes i{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.sobremi button{
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid #fff;
+    width: fit-content;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 22px;
+    font-size: 16px;
+    position: relative;
+}
+
+.sobremi button a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.sobremi button .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #1cb698;
+    z-index: -1;
+    transition: 1s;
+}
+
+.sobremi button:hover .overlay{
+    width: 100%;
+}
+
+/*SECCION SKILLS*/
+.skills{
+    background-color: #252a2e;
+    color: #fff;
+    padding: 50px 20px;
+}
+
+.skills .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+
+.skills h2{
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+}
+
+.skills .fila{
+    display: flex;
+}
+
+.skills .fila .col{
+    width: 50%;
+    padding: 0 20px;
+}
+
+.skills .fila .col h3{
+    font-size: 28px;
+    font-family: 'Righteous';
+    margin-bottom: 25px; 
+}
+
+.skills .skill>span{
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.skills .skill .barra-skill{
+    height: 8px;
+    width: 80%;
+    background-color: #131517;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.skills .skill .progreso{
+    background-color: #1cb698;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 8px;
+}
+
+.skills .skill .barra-skill span{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background-color: #1cb698;
+    border-radius: 50px;
+    line-height: 40px;
+    text-align: center;
+    top: -17px;
+    right: -15px;
+    font-size: 14px;
+}
+
+/*Estas clases se agregaran dinamicamente mediante javascript*/
+        /*Technical Skills*/
+.skills .skill .javascript{
+    width: 0%;
+    animation: 2s javascript forwards;
+}
+@keyframes javascript{
+    0%{width: 0%;}
+    100%{width: 65%;}
+}
+
+.skills .skill .htmlcss{
+    width: 0%;
+    animation: 2s htmlcss forwards;
+}
+@keyframes htmlcss{
+    0%{width: 0%;}
+    100%{width: 87%;}
+}
+
+.skills .skill .java{
+    width: 0%;
+    animation: 2s java forwards;
+}
+@keyframes java{
+    0%{width: 0%;}
+    100%{width: 73%;}
+}
+
+.skills .skill .mysql{
+    width: 0%;
+    animation: 2s mysql forwards;
+}
+@keyframes mysql{
+    0%{width: 0%;}
+    100%{width: 60%;}
+}
+
+.skills .skill .python{
+    width: 0%;
+    animation: 2s python forwards;
+}
+@keyframes python{
+    0%{width: 0%;}
+    100%{width: 54%;}
+}
+
+.skills .skill .gitgithub{
+    width: 0%;
+    animation: 2s gitgithub forwards;
+}
+@keyframes gitgithub{
+    0%{width: 0%;}
+    100%{width: 83%;}
+}
+
+        /*Professional Skills*/
+.skills .skill .comunicacion{
+    width: 0%;
+    animation: 2s comunicacion forwards;
+}
+@keyframes comunicacion{
+0%{width: 0%;}
+100%{width: 85%;}
+}
+
+.skills .skill .trabajo{
+    width: 0%;
+    animation: 2s trabajo forwards;
+}
+@keyframes trabajo{
+    0%{width: 0%;}
+    100%{width: 90%;}
+}
+
+.skills .skill .aprendizaje{
+    width: 0%;
+    animation: 2s aprendizaje forwards;
+}
+@keyframes aprendizaje{
+    0%{width: 0%;}
+    100%{width: 94%;}
+}
+
+.skills .skill .responsabilidad{
+    width: 0%;
+    animation: 2s responsabilidad forwards;
+}
+@keyframes responsabilidad{
+    0%{width: 0%;}
+    100%{width: 92%;}
+}
+
+.skills .skill .creatividad{
+    width: 0%;
+    animation: 2s creatividad forwards;
+}
+@keyframes creatividad{
+    0%{width: 0%;}
+    100%{width: 85%;}
+}
+
+.skills .skill .dedicacion{
+    width: 0%;
+    animation: 2s dedicacion forwards;
+}
+@keyframes dedicacion{
+    0%{width: 0%;}
+    100%{width: 88%;}
+}
+
+/*SECCION CURRICULUM*/
+.curriculum{
+    background-color: #1e2326;
+    color: #fff;
+    padding: 50px 20px;
+}
+
+.curriculum .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+
+.curriculum h2{
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+}
+
+.curriculum .fila{
+    display: flex;
+    justify-content: space-between;
+}
+
+.curriculum .fila .col{
+    width: 49%;
+    padding: 0 20px;
+}
+
+.curriculum .fila .col h3{
+    font-size: 28px;
+    font-family: 'Righteous';
+    margin-bottom: 25px;
+}
+
+.curriculum .fila .izquierda{
+    border-right: 2px solid #252a2e;
+}
+
+.curriculum .fila .derecha{
+    border-left: 2px solid #252a2e;
+}
+
+.curriculum .fila .item{
+    padding: 25px;
+    margin-bottom: 30px;
+    background-color: #252a2e;
+    position: relative;
+}
+
+.curriculum .fila .item h4{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.curriculum .fila .item .casa{
+    color: #1cb698;
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+}
+
+.curriculum .fila .item .fecha{
+    display: block;
+    color: #1cb698;
+    margin-bottom: 10px;
+}
+
+.curriculum .fila .item p{
+    line-height: 24px;
+}
+
+.curriculum .fila .izq{
+    border-right: 2px solid #1cb698;
+    margin-right: 20px;
+}
+
+.curriculum .fila .der{
+    border-left: 2px solid #1cb698;
+    margin-left: 20px;
+}
+
+.curriculum .fila .item .conectori{
+    height: 2px;
+    background-color: #1cb698;
+    width: 47px;
+    position: absolute;
+    top: 50%;
+    right: -47px;
+}
+
+.curriculum .fila .item .conectori .circuloi{
+    display: block;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #1cb698;
+    float: right;
+    position: relative;
+    bottom: 4px;
+}
+
+.curriculum .fila .item .conectord{
+    height: 2px;
+    background-color: #1cb698;
+    width: 47px;
+    position: absolute;
+    top: 50%;
+    left: -47px;
+}
+
+.curriculum .fila .item .conectord .circulod{
+    display: block;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #1cb698;
+    float: left;
+    position: relative;
+    bottom: 4px;
+}
+
+/*SECCION PORTFOLIO*/
+.portfolio{
+    background-color: #252a2e;
+    color: #fff;
+    padding: 50px 20px;
+}
+
+.portfolio .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+
+.portfolio h2{
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+}
+
+.portfolio .galeria{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.portfolio .galeria .proyecto{
+    position: relative;
+    max-width: 900px;
+    height: fit-content;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.portfolio .galeria .proyecto a{
+    color: #fff;
+}
+
+.portfolio .galeria .proyecto img{
+    width: 100%;
+    display: block;
+    border-radius: 15px;
+}
+
+.portfolio .galeria .proyecto .overlay{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: linear-gradient(rgba(28,182,152,.8), rgba(28,182,162,.8));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 1s;
+    font-size: 18px;
+    letter-spacing: 3px;
+    opacity: 0;
+    border-radius: 15px;
+}
+
+.portfolio .galeria .proyecto .overlay h3{
+    margin-bottom: 20px;
+    transition: 1s;
+}
+
+.portfolio .galeria .proyecto .overlay:hover{
+    opacity: 1;
+}
+
+.portfolio .galeria .proyecto .overlay:hover h3{
+    margin-bottom: 0px;
+}
+
+/*SECCION CONTACTO*/
+.contacto{
+    background-image: url(images/contact_bg.png);
+    background-color: #1e2326;
+    color: #fff;
+    padding: 50px 0;
+}
+
+.contacto .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+
+.contacto h2{
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+}
+
+.contacto .fila{
+    display: flex;
+}
+
+.contacto .col{
+    width: 50%;
+    padding: 10px;
+    position: relative;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none; /* Safari y Chrome */
+  margin: 0; /* Opcional: eliminar el espacio extra */
+}
+
+.contacto .col input, .contacto .col textarea{
+    display: block;
+    width: 100%;
+    padding: 18px;
+    border: none;
+    margin-bottom: 20px;
+    background-color: #252a2e;
+    color: #fff;
+    font-size: 18px;
+    resize: none;
+}
+
+.contacto button{
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid #fff;
+    width: fit-content;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 22px;
+    font-size: 16px;
+    color: #fff;
+    position: relative;
+    z-index: 10;
+}
+
+.contacto button .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #1cb698;
+    z-index: -1;
+    transition: 1s;
+}
+
+.contacto button:hover .overlay{
+    width: 100%;
+}
+
+.contacto .col img{
+    width: 100%;
+}
+
+.contacto .col .info{
+    position: absolute;
+    top: 40%;
+    background-color: #252a2e;
+    padding: 20px;
+    width: 350px; /*posible error*/
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.contacto .col .info ul{
+    list-style: none;
+}
+
+.contacto .col .info ul li{
+    margin-bottom: 20px;
+}
+
+.contacto .col .info ul li i{
+    color: #1cb698;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+footer{
+    background-color: #252a2e;
+    color: #fff;
+    padding: 50px 0 30px 0;
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+
+footer .redes{
+    margin-top: 20px;
+}
+
+footer .herramientas a{
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    width: 52px;
+    height: 52px;
+    line-height: 52px;
+    margin: 20px 5px;
+    font-size: 30px;
+}
+
+footer .arriba{
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #1cb698;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -25px;
+    border-radius: 50%;
+    line-height: 50px;
+    font-size: 18px;
+}
+
+/*==================================== Chat Bot ===================================*/
+/* Estilos para la barra de desplazamiento del chat */
+.containerWhat::-webkit-scrollbar {
+    width: 8px; /* Ancho de la barra de desplazamiento */
+  }
+  
+  .containerWhat::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Color del fondo de la barra de desplazamiento */
+  }
+  
+  .containerWhat::-webkit-scrollbar-thumb {
+    background: #888; /* Color de la barra de desplazamiento */
+    border-radius: 6px; /* Radio de los bordes de la barra de desplazamiento */
+  }
+  
+  .containerWhat::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color de la barra de desplazamiento al pasar el mouse */
+  }
+
+/* Estilos general de los contenedores principales */
+.container{
+    position: fixed;
+    display: none;
+    left: 99%;
+    top: 100%;
+    transform: translate(-100%, -100%);
+    width: 300px;
+    height: 460px;
+}
+
+.container .whatsapp{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.icono{
+    position: fixed;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 95%;
+    top: 95%;
+    transform: translate(-70%, -90%);
+    width: 70px;
+    height: 70px;
+    background-color: #1cb698;
+    border-radius: 40px 40px 40px 15px;
+}
+
+.icono .img{
+    width: 50px;
+}
+
+.whatsapp .chat{
+    display: block;
+    position: fixed;
+    opacity: 0;
+    width: 300px;
+    height: 450px;
+    border-radius: 10px;
+    background-color: #c7c7c5;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.25);
+}
+
+/* Estilos del encabezado */
+.headerWhat{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 10%;
+    padding: 0 10px;
+    background-color: #1cb698;
+    border-radius: 10px 10px 0 0;
+}
+
+.headUser{
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.headUser .imgUser{
+    width: 24px;
+}
+
+.userImagen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: rgb(201, 201, 201);
+    border: 1px solid #525252;
+}
+
+.headLogo{
+    margin: 0 20px;
+    font-size: 23px;
+    color: white;
+}
+
+.cerrar{
+    margin-right: 15px;
+}
+
+.cerrar i{
+    color: rgb(65, 65, 65);
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* Estilos del campo donde se muestran los mensajes */
+.containerWhat{
+    width: 100%;
+    height: 78%;
+    background-color: #fff;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-bottom: 15px;
+}
+
+/* estilo de las cajas de mensaje general*/
+.containerMensaje{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+    padding: 0px 5px 0px 5px;
+}
+
+.containerMensaje.usuario{
+    justify-content: flex-end;
+}
+
+/* Imagen de mensaje asistente */
+.imagen{
+    margin-right: 5px;
+    padding: 3px;
+    color: white;
+    align-self: flex-end;
+}
+
+/* Imagen de mensaje usuario */
+.imagen.imgUsuario{
+    margin-left: 5px;
+    margin-right: 0;
+}
+
+.imagen .imgMensaje{
+    width: 20px;
+}
+
+/* mensaje */
+.mensaje{
+    max-width: 75%;
+    font-size: 15px;
+    background-color: #f2f2f2;
+    text-align: justify;
+    padding: 10px;
+    border-radius: 10px 10px 10px 0px;
+}
+
+.mensaje.msgUsuario{
+    background-color: #1cb698;
+    border-radius: 10px 10px 0px 10px;
+    color: white;
+}
+
+
+/* Estilos para los mensajes
+.mensaje {
+    margin: 5px 5px; /* Margen superior e inferior para separar los mensajes
+    border-radius: 10px 0 10px 10px;
+    clear: both; /* Limpiar flotación para evitar superposiciones
+  }
+  
+  /* Estilos para los mensajes del usuario
+  .mensaje.usuario {
+    background-color: #007bff; /* Color de fondo para los mensajes del usuario
+    color: #fff; /* Color del texto para los mensajes del usuari
+    float: right; /* Alinear los mensajes del usuario a la derecha
+  }
+  
+  /* Estilos para los mensajes del asistente
+  .mensaje.asistente {
+    background-color: #28a745; /* Color de fondo para los mensajes del asistente
+    color: #fff; /* Color del texto para los mensajes del asistente
+    float: left; /* Alinear los mensajes del asistente a la izquierda
+  }
+*/
+
+/* Estilos para la barra de desplazamiento del chat */
+#cajaTexto::-webkit-scrollbar {
+    width: 8px; /* Ancho de la barra de desplazamiento */
+  }
+  
+  #cajaTexto::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Color del fondo de la barra de desplazamiento */
+  }
+  
+  #cajaTexto::-webkit-scrollbar-thumb {
+    background: #888; /* Color de la barra de desplazamiento */
+    border-radius: 6px; /* Radio de los bordes de la barra de desplazamiento */
+  }
+  
+  #cajaTexto::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color de la barra de desplazamiento al pasar el mouse */
+  }
+
+.textWhat{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 12%;
+    border-top: 1px solid #ccc;
+    border-radius: 0 0 10px 10px;
+    background: #fff;
+}
+
+.formularioMensaje{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+}
+
+.cajaTexto{
+    display: flex;
+    /* height: 1.875rem; */
+    width: 90%;
+    align-items: flex-end;
+    position: absolute;
+    bottom: 10px;
+}
+
+#cajaTexto{
+    padding: 10px;
+    width: 100%;
+    height: 36px;
+    resize: none;
+    max-height: 180px;
+    border-radius: 5px;
+    border: 0px solid;
+    border: none;
+    outline: none;
+}
+
+.btnEnviar{
+    align-self: flex-end;
+    cursor: pointer;
+    width: 10%;
+    height: 35px;
+    line-height: 40px;
+    visibility: visible;
+}
+
+.btnEnviar i{
+    font-size: 24px;
+    opacity: 0.8;
+    color: rgb(65, 65, 65);
+}
+
+.btnEnviar i:hover{
+    opacity: 1;
+}
+
+
+
+
+/*DISEÑO RESPONSIVE*/
+@media screen and (max-width:980px){
+    .no-scroll{
+        overflow: hidden!important;
+    }
+
+    nav{
+        display: none;
+    }
+
+    #nav{
+        transition: transform 0.3s ease-in-out;
+        transform: translateX(-100%);
+    }
+
+    #nav.responsive {
+        transform: translateX(0%);
+        animation: mostrarNav 0.3s ease-in-out;
+      }
+      
+      @keyframes mostrarNav {
+        from {
+          transform: translateX(-100%);
+        }
+        to {
+          transform: translateX(0%);
+        }
+      }
+      @keyframes ocultarNav {
+        from {
+          transform: translateX(0%);
+        }
+        to {
+          transform: translateX(-100%);
+        }
+      }
+
+    .nav-responsive{
+        display: block;
+    }
+
+    nav.responsive{
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 70px;
+        background-color: rgba(30, 35, 38, 0.8);;
+        width: 100%;
+        height: 100vh;
+        backdrop-filter: blur(7px);
+    }
+
+    nav.responsive ul{
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        height: 80vh;
+        justify-content: space-around;
+    }
+
+    nav.responsive ul li{
+        padding: 10px 0;
+    }
+
+    .inicio{
+        align-items: center;
+    }
+}
+
+@media screen and (max-width:700px){
+    .ui-abstergo {
+        --size: 1.5;
+    }
+
+    .sobremi .fila{
+        display: block;
+    }
+
+    .sobremi .fila .col{
+        width: fit-content;
+        display: contents;
+    }
+
+    .sobremi .fila .col ul {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: space-around;
+    }
+
+    .sobremi .fila .col ul li strong {
+        width: 126px;
+    }
+
+    .sobremi .fila .col .contenedor-intereses {
+        justify-content: center;
+    }
+
+    .skills .fila{
+        display: block;
+    }
+
+    .skills .fila .col{
+        width: 100%;
+    }
+
+    .skills .fila .col .barra-skill{
+        width: 100%;
+    }
+
+    .curriculum .fila{
+        display: block;
+    }
+
+    .curriculum .fila .col{
+        width: 90%;
+    }
+
+    .curriculum .fila .derecha{
+        margin-left: 20px;
+    }
+
+    .portfolio .galeria{
+        display: block;
+        width: 100%;
+    }
+
+    .portfolio .galeria .proyecto{
+        max-width: 100%;
+    }
+
+    .contacto .fila{
+        display: block;
+    }
+
+    .contacto .fila .col{
+        width: 100%;
+    }
+
+    .contacto .col .info{
+        top: 50%;
+    }
+    .container{
+        z-index: 100;
+        position: fixed;
+        left: none;
+        top: none;
+        width: 100vw;
+        height: 100vh;
+        transform: none;
+    }
+
+    .whatsapp .chat{       
+        position: relative;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+
+    .icono{
+        top: 95%;
+        left: 92%;
+    }
+
+    .cajaTexto{
+        bottom: 20px;
+    }
+
+    #cajaTexto{
+        font-size: 15px;
+        min-height: 38px;
+    }
+
+    .cerrar i {
+        font-size: 22px;
+    }
+
+    .btnEnviar i {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width:400px){
+
+    
+
+    .sobremi .fila .col ul #tamaño1 > strong{
+        width: 150px;
+    }
+
+    .sobremi .fila .col ul #tamaño-email > strong{
+        width: 90px;
+    }
+
+    .sobremi .fila .col ul #tamaño2 > strong{
+        width: 103px;
+    }
+}
+
+@media screen and (max-width: 389px) {
+    .sobremi .fila .col ul #tamaño-email > strong{
+        width: 70px;
+    }
+
+    .sobremi .fila .col ul #tamaño2 > strong{
+        width: 88px;
+    }
+}

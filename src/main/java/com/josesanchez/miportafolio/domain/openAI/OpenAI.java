@@ -12,7 +12,9 @@ import org.json.simple.parser.ParseException;
 
 @Component
 public class OpenAI {
+    @Value("${openai.apiKey}")
     private String apiKey;
+    @Value("${openai.apiUrl}}")
     private String apiUrl;
 
     @Autowired

@@ -383,10 +383,11 @@ nav a.active {
     background: linear-gradient(to top, rgba(30,35,38,.8), rgba(30,35,38,1)),
     url(images/fondo-inicio.jpg);
     background-size: cover;
-    height: 100vh;
+    height:90vh;
+    margin-top: 10vh;
     color: #fff;
     display: flex;
-    align-items: end;
+    align-items: center;
 }
 
 .inicio .contenido-banner{
@@ -455,7 +456,6 @@ nav a.active {
 }
 
 .sobremi .contenido-seccion p{
-    font: 18px;
     line-height: 22px;
     margin-bottom: 20px;
 }
@@ -734,10 +734,6 @@ nav a.active {
     width: 0%;
     animation: 2s dedicacion forwards;
 }
-@keyframes dedicacion{
-    0%{width: 0%;}
-    100%{width: 88%;}
-}
 
 /*SECCION CURRICULUM*/
 .curriculum{
@@ -750,6 +746,7 @@ nav a.active {
     max-width: 1100px;
     margin: auto;
 }
+
 
 .curriculum h2{
     font-size: 48px;
@@ -1421,6 +1418,8 @@ footer .arriba{
     }
 
     .inicio{
+        height: 93vh;
+        margin-top: 7vh;
         align-items: center;
     }
 }
@@ -1543,27 +1542,23 @@ footer .arriba{
 
 @media screen and (max-width:400px){
 
-    
-
-    .sobremi .fila .col ul #tamaño1 > strong{
-        width: 150px;
+    .sobremi .fila .col ul li strong {
+        width: 140px;
     }
 
-    .sobremi .fila .col ul #tamaño-email > strong{
-        width: 90px;
-    }
-
-    .sobremi .fila .col ul #tamaño2 > strong{
+    .sobremi .fila .col ul #perfil > strong{
         width: 103px;
     }
 }
 
 @media screen and (max-width: 389px) {
-    .sobremi .fila .col ul #tamaño-email > strong{
-        width: 70px;
-    }
 
-    .sobremi .fila .col ul #tamaño2 > strong{
+    .sobremi .fila .col ul #perfil > strong{
         width: 88px;
     }
+
+    .sobremi .fila .col ul li strong {
+        width: 130px;
+    }
+
 }

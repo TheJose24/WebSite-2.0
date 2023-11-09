@@ -54,7 +54,9 @@
               <a href="#curriculum" onclick="seleccionar()">CURRICULUM</a>
             </li>
             <li><a href="#portfolio" onclick="seleccionar()">PORTAFOLIO</a></li>
+            <!--
             <li><a href="#contacto" onclick="seleccionar()">CONTACTO</a></li>
+            -->
           </ul>
         </nav>
         <div class="nav-responsive" onclick="mostrarOcultarMenu()">
@@ -72,7 +74,7 @@
             <img src="/images/foto-principal2.png" alt="" />
           </div>
           <h1>JOSE SANCHEZ</h1>
-          <h2>Ingeniero de Sistemas - Full Stack</h2>
+          <h2>Ingeniero de Sistemas - Back End</h2>
           <div class="redes">
             <a
               href="https://www.linkedin.com/in/jose-sanchez-eisi/"
@@ -112,23 +114,23 @@
             <div class="col">
               <h3>Datos Personales</h3>
               <ul>
-                <li id="tamaño1">
+                <li id="cumpleaños">
                   <strong>Cumpleaños</strong>
                   24-04-2002
                 </li>
-                <li id="tamaño1">
+                <li id="telefono">
                   <strong>Telefono</strong>
                   +51 950 532 495
                 </li>
-                <li id="tamaño-email">
+                <li id="email">
                   <strong>Email</strong>
                   devbyjose@gmail.com
                 </li>
-                <li id="tamaño2">
+                <li id="direccion">
                   <strong>Direccion</strong>
                   Comas - Perú
                 </li>
-                <li id="tamaño2">
+                <li id="perfil">
                   <strong>Perfil</strong>
                   <span>ESTUDIANTE</span>
                   <span>FREELANCER</span>
@@ -168,7 +170,7 @@
             </div>
           </div>
           <button>
-            <a href="/pdf/Jose_Sanchez_CV.pdf" download
+            <a href="/pdf/Jose_Sanchez_CV_BackEnd.pdf" download
               >DESCARGAR CV <i class="fa-solid fa-download"></i
             ></a>
             <span class="overlay"></span>
@@ -213,14 +215,6 @@
                 <div class="barra-skill">
                   <div class="progreso">
                     <span>60%</span>
-                  </div>
-                </div>
-              </div>
-              <div class="skill">
-                <span>Python</span>
-                <div class="barra-skill">
-                  <div class="progreso">
-                    <span>54%</span>
                   </div>
                 </div>
               </div>
@@ -276,14 +270,6 @@
                   </div>
                 </div>
               </div>
-              <div class="skill">
-                <span>Dedicacion</span>
-                <div class="barra-skill">
-                  <div class="progreso">
-                    <span>88%</span>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -314,7 +300,7 @@
                 </div>
               </div>
               <div class="item izq">
-                <h4>Universidad Tecnologica del Perú</h4>
+                <h4>Universidad Tecnológica del Perú</h4>
                 <span class="casa">Ingeniero de Sistemas e Informatica</span>
                 <span class="fecha">2022 - Actualidad</span>
                 <p>
@@ -464,43 +450,48 @@
       </section>
 
       <!--SECCION CONTACTO-->
+      <!--
       <section id="contacto" class="contacto">
         <div class="contenido-seccion">
           <h2>CONTACTO</h2>
           <div class="fila">
+          -->
             <!--Formulario-->
-            <div class="col">
-              <form name="formulario-contacto" netlify>
-                <input type="text" name="nombre" placeholder="Tu Nombre" />
-                <input
-                  type="number"
-                  name="Telefono"
-                  placeholder="Numero Telefono"
-                />
-                <input
-                  type="email"
-                  name="correo"
-                  placeholder="Direccion de correo"
-                />
-                <input type="text" name="tema" placeholder="Tema" />
-                <textarea
-                  name="asunto"
-                  cols="30"
-                  rows="10"
-                  placeholder="Mensaje"
-                ></textarea>
-                <button type="submit">
-                  Enviar Mensaje <i class="fa-solid fa-paper-plane"></i>
-                  <span class="overlay"></span>
-                </button>
-                <input
-                  type="hidden"
-                  name="_next"
-                  value="https://josesanchez-website.netlify.app/"
-                />
-              </form>
-            </div>
-            <!--Mapa-->
+      <!--
+      <div class="col">
+        <form name="formulario-contacto" netlify>
+          <input type="text" name="nombre" placeholder="Tu Nombre" />
+          <input
+            type="number"
+            name="Telefono"
+            placeholder="Numero Telefono"
+          />
+          <input
+            type="email"
+            name="correo"
+            placeholder="Direccion de correo"
+          />
+          <input type="text" name="tema" placeholder="Tema" />
+          <textarea
+            name="asunto"
+            cols="30"
+            rows="10"
+            placeholder="Mensaje"
+          ></textarea>
+          <button type="submit">
+            Enviar Mensaje <i class="fa-solid fa-paper-plane"></i>
+            <span class="overlay"></span>
+          </button>
+          <input
+            type="hidden"
+            name="_next"
+            value="https://josesanchez-website.netlify.app/"
+          />
+        </form>
+      </div>
+      -->
+      <!--Mapa-->
+      <!--
             <div class="col">
               <img src="/images/ubicacion.png" alt="" />
               <div class="info">
@@ -521,10 +512,10 @@
               </div>
             </div>
           </div>
-        </div>
+        </div>*/
       </section>
     </main>
-
+    -->
     <!--FOOTER-->
     <footer>
       <a href="#inicio" class="arriba">
@@ -540,6 +531,9 @@
         ></a>
         <a href="#"
           ><i class="fa-brands fa-square-js" style="color: #f7df1e"></i
+        ></a>
+        <a href="#"
+        ><i class="fa-brands fa-java" style="color: #ff0000"></i
         ></a>
       </div>
     </footer>
@@ -577,7 +571,7 @@
           <div class="textWhat">
             <form class="formularioMensaje">
               <div class="cajaTexto" id="contenedorTextarea">
-                <textarea id="cajaTexto" placeholder="Escribe un mensaje..." required></textarea>
+                <textarea id="cajaTexto" placeholder="Escribe un mensaje..." oninput="capitalizarPrimeraLetra()" required></textarea>
                 <div class="btnEnviar" id="btnEnviar" onclick="enviar()">
                   <i class="fa-solid fa-circle-chevron-right"></i>
                 </div>
@@ -594,5 +588,6 @@
     </div>
 
     <script src="/script.js"></script>
+    </main>
   </body>
 </html>

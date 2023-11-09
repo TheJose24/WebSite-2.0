@@ -62,20 +62,18 @@ function efectoSkills() {
     habilidades[1].classList.add("htmlcss");
     habilidades[2].classList.add("java");
     habilidades[3].classList.add("mysql");
-    habilidades[4].classList.add("python");
-    habilidades[5].classList.add("gitgithub");
-    habilidades[6].classList.add("comunicacion");
-    habilidades[7].classList.add("trabajo");
-    habilidades[8].classList.add("aprendizaje");
-    habilidades[9].classList.add("responsabilidad");
-    habilidades[10].classList.add("creatividad");
-    habilidades[11].classList.add("dedicacion");
+    habilidades[4].classList.add("gitgithub");
+    habilidades[5].classList.add("comunicacion");
+    habilidades[6].classList.add("trabajo");
+    habilidades[7].classList.add("aprendizaje");
+    habilidades[8].classList.add("responsabilidad");
+    habilidades[9].classList.add("creatividad");
   }
 }
 //=============================FIN ANIMACION======================================
 
 /*======================FUNCION DE NAVEGACION DE SECCIONES=====================
-regar la clase "active" a la sección actual en la barra de navegación. La función
+Agregar la clase "active" a la sección actual en la barra de navegación. La función
 "actualizarSeccionActual()" recorre todas las secciones y agrega la clase "active"
 a la etiqueta "a" correspondiente a la sección actual. Además, se extrae el valor
 del hash de la URL para agregar la clase "active" a la sección correspondiente en
@@ -195,6 +193,15 @@ let indiceConversacion = 0;
 
 //=====================================================================================================
 
+
+function capitalizarPrimeraLetra() {
+    let input = document.getElementById("cajaTexto");
+    let texto = input.value;
+
+    if (texto.length > 0) {
+        input.value = texto.charAt(0).toUpperCase() + texto.slice(1);
+    }
+}
 
 
 
@@ -354,8 +361,10 @@ function enviar() {
                   console.log("Se esta abriendo whatsapp")
               } else if (data.includes("FuncionActivada: Agendar_Reunion")) {
 
+                  mensajeAsistente.textContent = "Mi creador me está enseñando a agendar reuniones. ¡Pronto podré hacerlo!"
 
-                  manejarRecopilacionInformacion();
+
+                  //manejarRecopilacionInformacion();
 
                   containerWhat.scrollTo(0, containerWhat.scrollHeight);
                   console.log("Se esta agendando una reunion")

@@ -20,8 +20,6 @@ public class OpenAI {
     @Autowired
     private RestTemplate restTemplate;
 
-
-
     public String processResponse(String responseJson) {
         try {
             JSONParser parser = new JSONParser();
@@ -37,7 +35,7 @@ public class OpenAI {
                     JSONObject functionCall = (JSONObject) message.get("function_call");
                     String functionName = (String) functionCall.get("name");
 
-                    // Aquí puedes verificar el nombre de la función y actuar en consecuencia
+
                     if ("Abrir_WhatsApp".equals(functionName)) {
                         return "FuncionActivada: " + functionName;
                     } else if ("Agendar_Reunion".equals(functionName)) {

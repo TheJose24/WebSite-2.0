@@ -517,3 +517,12 @@ cajaTexto.addEventListener("input", function () {
     btnEnviar.style.visibility = "hidden";
   }
 });
+
+function capitalizarPrimeraLetra() {
+    let input = document.getElementById("cajaTexto");
+    let texto = input.value;
+
+    if (texto.length > 0) {
+        input.value = texto.charAt(0).toUpperCase() + texto.slice(1);
+    }
+}
